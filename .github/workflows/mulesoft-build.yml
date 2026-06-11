@@ -19,12 +19,8 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Build Mule Application
-        run: mvn clean package -DskipMunitTests
-
-      - name: Deploy to CloudHub 2.0
+      - name: Build and Deploy Mule Application
         run: |
-          mvn deploy \
-          -DmuleDeploy \
+          mvn clean deploy -DmuleDeploy \
           -Danypoint.username=${{ secrets.ANYPOINT_USERNAME }} \
           -Danypoint.password=${{ secrets.ANYPOINT_PASSWORD }}
