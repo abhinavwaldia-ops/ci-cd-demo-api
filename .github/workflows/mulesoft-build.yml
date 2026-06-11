@@ -1,4 +1,4 @@
-name: MuleSoft Build
+name: MuleSoft CI/CD
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,4 +20,11 @@ jobs:
           java-version: '17'
 
       - name: Build Mule Application
-        run: mvn clean package
+        run: mvn clean package -DskipMunitTests
+
+      - name: Deploy to CloudHub 2.0
+        run: |
+          mvn deploy \
+          -DmuleDeploy \
+          -Danypoint.username=${{ secrets.ANYPOINT_USERNAME }} \
+          -Danypoint.password=${{ secrets.ANYPOINT_PASSWORD }}
