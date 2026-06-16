@@ -19,8 +19,8 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-- name: Build and Deploy Mule Application
-  run: |
-    mvn clean deploy -DmuleDeploy \
-    -DconnectedAppClientId=${{ secrets.CONNECTED_APP_CLIENT_ID }} \
-    -DconnectedAppClientSecret=${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
+      - name: Build and Deploy Mule Application
+        run: |
+          mvn clean deploy -DmuleDeploy \
+          -DconnectedAppClientId=${{ secrets.CONNECTED_APP_CLIENT_ID }} \
+          -DconnectedAppClientSecret=${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
