@@ -4,7 +4,7 @@
 
 	<groupId>com.mycompany</groupId>
 	<artifactId>ci-cd-demo-api</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
 	<name>ci-cd-demo-api-v1</name>
