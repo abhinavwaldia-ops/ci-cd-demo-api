@@ -19,8 +19,8 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Build and Deploy Mule Application
-        run: |
-          mvn clean deploy -DmuleDeploy \
-          -Danypoint.username=${{ secrets.ANYPOINT_USERNAME }} \
-          -Danypoint.password=${{ secrets.ANYPOINT_PASSWORD }}
+- name: Build and Deploy Mule Application
+  run: |
+    mvn clean deploy -DmuleDeploy \
+    -DconnectedAppClientId=${{ secrets.CONNECTED_APP_CLIENT_ID }} \
+    -DconnectedAppClientSecret=${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
