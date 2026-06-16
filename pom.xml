@@ -33,24 +33,31 @@
     <configuration>
         <cloudhub2Deployment>
 
-            <uri>https://anypoint.mulesoft.com</uri>
+    <uri>https://anypoint.mulesoft.com</uri>
 
-            <provider>MC</provider>
+    <provider>MC</provider>
 
-            <environment>Sandbox</environment>
-            
-            <businessGroup>Grazitti interactive</businessGroup>
+    <environment>Sandbox</environment>
 
-            <applicationName>ci-cd-demo-api</applicationName>
+    <businessGroup>Grazitti interactive</businessGroup>
 
-            <target>Cloudhub-US-East-2</target>
-            <muleVersion>4.8.12</muleVersion>
+    <applicationName>ci-cd-demo-api</applicationName>
 
-            <replicas>1</replicas>
+    <target>Cloudhub-US-East-2</target>
 
-            <vCores>0.1</vCores>
+    <muleVersion>4.8.12</muleVersion>
 
-        </cloudhub2Deployment>
+    <replicas>1</replicas>
+
+    <vCores>0.1</vCores>
+
+    <connectedAppClientId>${connectedAppClientId}</connectedAppClientId>
+
+    <connectedAppClientSecret>${connectedAppClientSecret}</connectedAppClientSecret>
+
+    <connectedAppGrantType>client_credentials</connectedAppGrantType>
+
+</cloudhub2Deployment>
     </configuration>
 </plugin>
 		</plugins>
