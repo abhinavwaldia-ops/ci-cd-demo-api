@@ -45,7 +45,7 @@
 
     <target>Cloudhub-US-East-2</target>
 
-    <muleVersion>4.8.12</muleVersion>
+    <muleVersion>4.12.0</muleVersion>
 
     <replicas>1</replicas>
 
