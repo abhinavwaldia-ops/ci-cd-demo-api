@@ -41,7 +41,7 @@
 
     <businessGroup>Grazitti interactive</businessGroup>
 
-    <applicationName>ci-cd-demo-api</applicationName>
+    <applicationName>ci-cd-demo-api-cicd</applicationName>
 
     <target>Cloudhub-US-East-2</target>
 
