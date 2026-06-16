@@ -39,7 +39,7 @@
 
     <environment>Sandbox</environment>
 
-    <businessGroupId>1868967d-3ed8-4d30-b56e-ba80e45b2322</businessGroupId>
+    <businessGroup>Grazitti interactive</businessGroup>
 
     <applicationName>ci-cd-demo-api</applicationName>
 
